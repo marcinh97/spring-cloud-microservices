@@ -1,13 +1,13 @@
-package com.horakm.config
+package com.horakm.eureka
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
 
 @SpringBootTest
-class ConfigApplicationTests {
+class EurekaApplicationTests {
 
-    @Test
-    fun contextLoads() {
-    }
+	@Test
+	fun contextLoads() {
+	}
 
 }
