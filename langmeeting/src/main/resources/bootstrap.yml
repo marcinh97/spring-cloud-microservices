@@ -14,3 +14,7 @@ management:
     web:
       exposure:
         include: "*"
+# This enables to discover (register) multiple instances of the app running in parallel
+eureka:
+  instance:
+    instance-id: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.value}}}
