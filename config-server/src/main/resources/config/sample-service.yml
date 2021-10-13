@@ -1,0 +1,4 @@
+server:
+  port: 0 # dynamically allocates port
+property1: 'Sample service meeting prop 1 - generic'
+property2: 'Sample service meeting prop 2 - generic'
