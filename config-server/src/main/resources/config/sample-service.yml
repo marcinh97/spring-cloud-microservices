@@ -25,6 +25,6 @@ feign:
   client:
     config:
       lang-service:
-        read-timeout: 100
-        connect-timeout: 100
+#        read-timeout: 100
+#        connect-timeout: 100
         logger-level: full
