@@ -1,2 +1,5 @@
-server.port: 8100
+spring:
+  application:
+    name: config-server # for eureka discovery
+server.port: 0
 property3: 'Lang meeting prop 2 - generic'

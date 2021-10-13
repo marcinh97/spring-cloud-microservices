@@ -2,3 +2,20 @@ server:
   port: 0 # dynamically allocates port
 property1: 'Sample service meeting prop 1 - generic'
 property2: 'Sample service meeting prop 2 - generic'
+# To enable actuator endpoints:
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+
+# Sample configuration useful when e.g. killing app forcefully
+eureka:
+  instance:
+    # Indicates how often app sends heartbeat to Eureka server
+    lease-renewal-interval-in-seconds: 30
+    # Indicates how long Eureka server waits for heartbeat before removing instance from discovery
+    lease-expiration-duration-in-seconds: 90

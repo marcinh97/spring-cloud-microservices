@@ -21,7 +21,8 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	implementation("org.springframework.cloud:spring-cloud-config-server")
-	testImplementation("org.springframework.boot:spring-boot-starter-test")
+    implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:3.0.4")
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
 dependencyManagement {
