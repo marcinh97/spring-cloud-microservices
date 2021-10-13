@@ -23,4 +23,7 @@ class PersonController(private val personRepository: PersonRepository) {
 
     @GetMapping
     fun findAll(): MutableList<Person> = personRepository.findAll()
+
+    @GetMapping("/property1")
+    fun getProperty(): String = prop1
 }
