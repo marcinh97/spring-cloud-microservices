@@ -19,3 +19,12 @@ eureka:
     lease-renewal-interval-in-seconds: 30
     # Indicates how long Eureka server waits for heartbeat before removing instance from discovery
     lease-expiration-duration-in-seconds: 90
+
+# Feign client
+feign:
+  client:
+    config:
+      lang-service:
+        read-timeout: 100
+        connect-timeout: 100
+        logger-level: full
