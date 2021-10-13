@@ -9,5 +9,6 @@ import org.springframework.cloud.config.server.EnableConfigServer
 class ConfigServerApplication
 
 fun main(args: Array<String>) {
+    // requires native profile to run
 	runApplication<ConfigServerApplication>(*args)
 }
