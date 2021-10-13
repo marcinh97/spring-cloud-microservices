@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true # not to use uppercase: localhost:8080/MY-SERVICE/... but lowercase instead
+      routes:
+        - id: lang-service
+          uri: lb://lang-service
+          predicates:
+            - Path=/api/person/**
+          filters:
+            - RewritePath=/api(?<path>/?.*), $\{path}
+        - id: sample-service
+          uri: lb://sample-service
+          predicates:
+            - Path=/api/sample/** # this works when /sample is in @RequestMapping of all service's controllers!
+          filters:
+            - StripPrefix=1 # removes "api" from path - works when /sample is in @RequestMapping
+# Metrics:
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "*"
