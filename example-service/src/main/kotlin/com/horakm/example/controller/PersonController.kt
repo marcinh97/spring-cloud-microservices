@@ -1,12 +1,12 @@
-package com.horakm.langmeeting.controller
+package com.horakm.example.controller
 
-import com.horakm.langmeeting.domain.Person
-import com.horakm.langmeeting.repository.PersonRepository
+import com.horakm.example.domain.Person
+import com.horakm.example.repository.PersonRepository
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.web.bind.annotation.*
 
 @RestController
-@RequestMapping("/person")
+@RequestMapping("/example/person")
 class PersonController(private val personRepository: PersonRepository) {
 
     // to showcase that config from config server has been injected

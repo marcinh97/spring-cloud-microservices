@@ -1,4 +1,4 @@
-package com.horakm.langmeeting.domain
+package com.horakm.example.domain
 
 data class Person(
     val id: Int,

@@ -1,10 +1,10 @@
-package com.horakm.langmeeting
+package com.horakm.example
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
 
 @SpringBootTest
-class LangmeetingApplicationTests {
+class ExampleServiceApplicationTests {
 
 	@Test
 	fun contextLoads() {
