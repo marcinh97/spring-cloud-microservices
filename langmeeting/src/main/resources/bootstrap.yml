@@ -1,4 +1,7 @@
 spring:
   cloud:
     config:
-      uri: http://localhost:8100
+      discovery:
+        # This enables dynamic allocation of config server port
+        enabled: true
+        service-id: config-server
