@@ -21,3 +21,11 @@ management:
     endpoint:
       health:
           show-details: always
+
+# Sample configuration useful when e.g. killing app forcefully
+eureka:
+  instance:
+    # Indicates how often app sends heartbeat to Eureka server
+    lease-renewal-interval-in-seconds: 30
+    # Indicates how long Eureka server waits for heartbeat before removing instance from discovery
+    lease-expiration-duration-in-seconds: 90
