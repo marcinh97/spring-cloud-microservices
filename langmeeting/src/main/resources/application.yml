@@ -12,7 +12,7 @@ spring:
         ansi:
             enabled: ALWAYS
 
-# Prometheus config:
+# To enable actuator endpoints:
 management:
     endpoints:
         web:
