@@ -1,11 +1,11 @@
-package com.horakm.config
+package com.horakm.langmeeting
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class ConfigApplication
+class LangmeetingApplication
 
 fun main(args: Array<String>) {
-    runApplication<ConfigApplication>(*args)
+	runApplication<LangmeetingApplication>(*args)
 }

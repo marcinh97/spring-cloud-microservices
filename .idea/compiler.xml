@@ -3,6 +3,7 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
       <module name="callme-service" target="11" />
+      <module name="eureka" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
