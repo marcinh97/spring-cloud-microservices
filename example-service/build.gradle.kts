@@ -12,7 +12,7 @@ plugins {
 group = "com.horakm"
 version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_11
-var dockerImgName = "langmeeting"
+var dockerImgName = "example-service"
 
 repositories {
 	mavenCentral()
@@ -76,7 +76,7 @@ springBoot {
 // uncomment to push to my private repo on docker hub
 //jib {
 //	to {
-//		image = "horakmarcin/main:langmeeting"
+//		image = "horakmarcin/main:example-service"
 //		credHelper = "osxkeychain"
 //	}
 //}

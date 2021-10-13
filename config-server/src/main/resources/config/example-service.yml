@@ -1,10 +1,10 @@
 server:
   port: 0 # dynamically allocates port
-property1: 'Lang meeting prop 1 - generic'
-property2: 'Lang meeting prop 2 - generic'
+property1: 'EXAMPLE meeting prop 1 - generic'
+property2: 'EXAMPLE meeting prop 2 - generic'
 spring:
   application:
-    name: lang-service
+    name: example-service
   datasource:
     driverClassName: org.h2.Driver
     password: password

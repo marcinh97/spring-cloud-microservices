@@ -1,6 +1,6 @@
-package com.horakm.langmeeting.repository
+package com.horakm.example.repository
 
-import com.horakm.langmeeting.domain.Person
+import com.horakm.example.domain.Person
 import org.springframework.stereotype.Repository
 
 @Repository

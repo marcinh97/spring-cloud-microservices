@@ -24,7 +24,7 @@ eureka:
 feign:
   client:
     config:
-      lang-service:
+      example-service:
 #        read-timeout: 100
 #        connect-timeout: 100
         logger-level: full
