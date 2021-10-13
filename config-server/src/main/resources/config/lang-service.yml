@@ -2,3 +2,34 @@ server:
   port: 0 # dynamically allocates port
 property1: 'Lang meeting prop 1 - generic'
 property2: 'Lang meeting prop 2 - generic'
+spring:
+  application:
+    name: lang-service
+  datasource:
+    driverClassName: org.h2.Driver
+    password: password
+    url: jdbc:h2:mem:testdb
+    username: sa
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  output:
+    ansi:
+      enabled: ALWAYS
+
+# To enable actuator endpoints:
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+
+# Sample configuration useful when e.g. killing app forcefully
+eureka:
+  instance:
+    # Indicates how often app sends heartbeat to Eureka server
+    lease-renewal-interval-in-seconds: 30
+    # Indicates how long Eureka server waits for heartbeat before removing instance from discovery
+    lease-expiration-duration-in-seconds: 90
