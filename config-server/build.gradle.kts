@@ -5,6 +5,7 @@ plugins {
 	id("io.spring.dependency-management") version "1.0.11.RELEASE"
 	kotlin("jvm") version "1.5.31"
 	kotlin("plugin.spring") version "1.5.31"
+    id("com.google.cloud.tools.jib") version "3.1.4"
 }
 
 group = "com.horakm"
@@ -40,4 +41,11 @@ tasks.withType<KotlinCompile> {
 
 tasks.withType<Test> {
 	useJUnitPlatform()
+}
+
+jib {
+    to {
+        image = "horakmarcin/main:config-server"
+        credHelper = "osxkeychain"
+    }
 }

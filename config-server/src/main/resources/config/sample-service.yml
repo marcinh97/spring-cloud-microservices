@@ -1,5 +1,5 @@
 server:
-  port: 0 # dynamically allocates port
+  port: 8091 # change to 0 for dynamically allocated port
 property1: 'Sample service meeting prop 1 - generic'
 property2: 'Sample service meeting prop 2 - generic'
 # To enable actuator endpoints:
