@@ -1,39 +1,6 @@
-# lang-client
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Run your end-to-end tests
-```
-npm run test:e2e
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# Spring Cloud microservices
+Kotlin-based Spring Cloud template to quickly bootstrap a simple application with:
+- Eureka discovery server (to automatically register newly added microservices)
+- configuration server (for centralized configuration of microservices)
+- Spring Cloud API gateway
+- 2 sample microservices with Feign connection
