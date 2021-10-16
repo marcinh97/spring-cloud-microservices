@@ -1,5 +1,5 @@
 server:
-  port: 0 # dynamically allocates port
+  port: 8090 # change to 0 for dynamically allocated port
 property1: 'EXAMPLE meeting prop 1 - generic'
 property2: 'EXAMPLE meeting prop 2 - generic'
 spring:

@@ -1,0 +1,41 @@
+version: '3'
+services:
+  discovery:
+    image: horakmarcin/main:discovery-server
+    ports:
+      - "8761:8761"
+  config:
+    image: horakmarcin/main:config-server
+    ports:
+      - "8888:8888"
+    depends_on:
+      - discovery
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://discovery:8761/eureka/
+      - "SPRING_PROFILES_ACTIVE=native"
+  gateway:
+    image: horakmarcin/main:api-gateway
+    ports:
+      - "8080:8080"
+    depends_on:
+      - discovery
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://discovery:8761/eureka/
+  example-service:
+    image: horakmarcin/main:example-service
+    ports:
+      - "8090:8090"
+    depends_on:
+      - discovery
+      - config
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://discovery:8761/eureka/
+  sample-service:
+    image: horakmarcin/main:sample-service
+    ports:
+      - "8091:8091"
+    depends_on:
+      - discovery
+      - config
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://discovery:8761/eureka/

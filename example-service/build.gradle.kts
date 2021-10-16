@@ -73,10 +73,9 @@ springBoot {
 	buildInfo()
 }
 
-// uncomment to push to my private repo on docker hub
-//jib {
-//	to {
-//		image = "horakmarcin/main:example-service"
-//		credHelper = "osxkeychain"
-//	}
-//}
+jib {
+	to {
+		image = "horakmarcin/main:example-service"
+		credHelper = "osxkeychain"
+	}
+}
