@@ -25,7 +25,17 @@ dependencies {
     implementation("org.springframework.cloud:spring-cloud-starter-gateway:3.0.4")
     implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
     implementation("org.springframework.boot:spring-boot-starter-actuator")
+
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-security
+    implementation("org.springframework.boot:spring-boot-starter-security:2.5.5")
+
+    // https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt
+    implementation("io.jsonwebtoken:jjwt:0.9.1")
+
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+    testImplementation("io.mockk:mockk:1.12.0")
+    testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
+
 }
 
 dependencyManagement {
